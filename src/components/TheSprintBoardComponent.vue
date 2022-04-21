@@ -124,7 +124,7 @@
         </v-card-title>
         <draggable
           v-if="itemBoardStatus[n].status"
-          :delay-on-touch-only="300"
+          :delay="50"
           :list="tasks[n]"
           group="id"
           class="ma-2"
