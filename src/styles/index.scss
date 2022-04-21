@@ -64,6 +64,10 @@ html body .v-application {
     filter: invert(1);
   }
 
+  .ql-editor p {
+    margin-bottom: 0;
+  }
+
   .quillWrapper {
     .ql-toolbar {
       .ql-stroke {

@@ -27,7 +27,7 @@
           autoplay
           loop
           muted
-          style="height: 70vh"
+          style="height: 70vh;width: 100%;"
         >
           <source :src="dog">
         </video>
@@ -70,6 +70,7 @@ export default class RelaxView extends Vue {
           this.dog = await response.data.url
           if (this.dog.split('.').pop() === 'mp4') {
             this.type = 0
+            this.loadImg = true
           } else {
             this.type = 1
             this.loadImg = false

@@ -1,6 +1,10 @@
 <template>
   <div class="pt-3 d-flex align-center">
-    <v-slide-group :show-arrows="$vuetify.breakpoint.smAndDown?false:'always'">
+    <v-slide-group
+      v-if="$vuetify.breakpoint.mdAndUp"
+      show-arrows="always"
+      mobile-breakpoint="0"
+    >
       <v-slide-item
         v-for="(taskArray,n) in tasks"
         :key="n"
@@ -33,6 +37,8 @@
             </v-btn>
           </v-card-title>
           <draggable
+            :delay-on-touch-only="50"
+            :touch-start-threshold="20"
             :list="tasks[n]"
             group="id"
             class="ma-2"
@@ -87,6 +93,57 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
+    <div
+      v-else
+      style="width: 100%"
+    >
+      <v-card
+        v-for="(taskArray,n) in tasks"
+        :key="n"
+        class="mb-4"
+        width="100%"
+        outlined
+      >
+        <v-card-title
+          class="py-1"
+          :style="{borderBottom: '3px solid '+ getStatus(n+1).color}"
+        >
+          <v-sheet
+            class="rounded mr-1"
+            :color="getStatus(n+1).color"
+            width="15"
+            height="15"
+          />
+          <span>{{ getStatus(n + 1).name }}</span>
+          <v-spacer />
+          <v-btn
+            x-small
+            icon
+            @click="itemBoardStatus[n].status=!itemBoardStatus[n].status"
+          >
+            <v-icon>mdi-chevron-{{ itemBoardStatus[n].status ? 'up' : 'down' }}</v-icon>
+          </v-btn>
+        </v-card-title>
+        <draggable
+          v-if="itemBoardStatus[n].status"
+          :delay-on-touch-only="50"
+          :touch-start-threshold="20"
+          :list="tasks[n]"
+          group="id"
+          class="ma-2"
+          @change="(v)=>changeTaskInSprint(v,n + 1)"
+        >
+          <SprintTaskComponent
+            v-for="task in taskArray"
+            :key="task.id"
+            :task="task"
+            :sprint-id="parseInt($route.params.id)"
+            :small="true"
+            :full="true"
+          />
+        </draggable>
+      </v-card>
+    </div>
   </div>
 </template>
 

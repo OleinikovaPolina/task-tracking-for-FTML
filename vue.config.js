@@ -6,10 +6,10 @@ module.exports = defineConfig({
     transpileDependencies: ['vuetify'],
     pwa: {
         name: 'Task tracking',
-        themeColor: '#323a83',
+        themeColor: '#262e7c',
         msTileColor: '#fff',
         appleMobileWebAppCapable: 'yes',
-        appleMobileWebAppStatusBarStyle: '#323a83',
+        appleMobileWebAppStatusBarStyle: '#242c72',
         manifestOptions: {
             start_url: './',
             scope: '.',
