@@ -1,0 +1,98 @@
+html body .v-application {
+  &.app-background {
+    background: linear-gradient(180deg, #011133 70%, #471667);
+  }
+
+  .v-dialog .v-card, .v-list {
+    background-color: #011133
+  }
+
+  .v-navigation-drawer {
+    background: linear-gradient(180deg, #011133 70%, #471667);
+  }
+
+  .v-card {
+    background-color: #31276a;
+    border: 1px solid #011133;
+  }
+
+  .v-btn.v-btn--has-bg {
+    background: linear-gradient(45deg, #5e48b7, #3d3696);
+    color: white;
+  }
+
+  .v-btn.v-btn--has-bg.primary {
+    background: linear-gradient(#5e48b7, #3d3696);
+  }
+
+  .v-btn.v-btn--text {
+    color: #9e4dd6;
+  }
+
+  .my-purple, .v-app-bar {
+    background-color: #323a83 !important;
+    border-color: #323a83 !important;
+  }
+
+  .error--text {
+    color: #d00379 !important;
+  }
+
+  .v-input--selection-controls__input {
+    display: none;
+  }
+
+  .v-radio {
+    color: rgba(0, 0, 0, 0);
+    border-bottom: 1.5px dashed;
+  }
+
+  .v-item--active {
+    * {
+      color: #9e4dd6;
+    }
+
+    color: #9e4dd6;
+    border-bottom: 1.5px dashed;
+  }
+
+  .v-tabs .v-tabs-bar, .v-tabs-items {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+  .quillWrapper {
+    .ql-toolbar {
+      .ql-stroke {
+        stroke: #FFFFFFBF
+      }
+
+      .ql-fill {
+        fill: #FFFFFFBF
+      }
+
+      .ql-active .ql-stroke, button:hover .ql-stroke, .ql-picker-label:hover .ql-stroke {
+        stroke: #9e4dd6
+      }
+
+      .ql-active .ql-fill, button:hover .ql-fill, .ql-picker-label:hover .ql-fill {
+        fill: #9e4dd6
+      }
+
+      * {
+        color: #9e4dd6 !important;
+      }
+
+      .ql-picker-options {
+        background-color: #011133;
+      }
+    }
+
+    a {
+      color: #9e4dd6
+    }
+  }
+}
