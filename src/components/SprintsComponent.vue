@@ -58,8 +58,8 @@
       </v-card-text>
 
       <draggable
-        :delay-on-touch-only="50"
-        :touch-start-threshold="20"
+          :delay-on-touch-only="100"
+          :touch-start-threshold="50"
         :list="Object.assign([],sprint.tasks)"
         group="id"
         class="ma-2"

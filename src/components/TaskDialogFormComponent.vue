@@ -8,9 +8,16 @@
       <v-card v-if="dialog">
         <v-card-title class="text-h5 my-purple">
           {{ form.id ? 'Change task' : 'Create task' }}
+          <v-spacer />
+          <v-btn
+            icon
+            @click="$emit('changeDialog',false)"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
         </v-card-title>
 
-        <v-card-text class="py-3">
+        <v-card-text class="pa-3 px-md-6">
           <v-form
             ref="form"
             v-model="valid"
@@ -46,6 +53,7 @@
               <v-col
                 cols="12"
                 md="6"
+                class="py-0"
               >
                 <v-autocomplete
                   v-model="form.priority"
@@ -61,6 +69,7 @@
               <v-col
                 cols="12"
                 md="6"
+                class="py-0"
               >
                 <v-autocomplete
                   v-model="form.status"
@@ -79,7 +88,7 @@
               <v-col
                 cols="12"
                 md="6"
-                class="pt-0"
+                class="py-0"
               >
                 <div>Date creation</div>
                 <v-text-field
@@ -93,7 +102,7 @@
               <v-col
                 cols="12"
                 md="6"
-                class="pt-0"
+                class="py-0"
               >
                 <div>Deadline</div>
                 <v-text-field

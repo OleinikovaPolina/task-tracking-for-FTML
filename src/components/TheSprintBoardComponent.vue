@@ -37,8 +37,6 @@
             </v-btn>
           </v-card-title>
           <draggable
-            :delay-on-touch-only="50"
-            :touch-start-threshold="20"
             :list="tasks[n]"
             group="id"
             class="ma-2"
@@ -126,8 +124,8 @@
         </v-card-title>
         <draggable
           v-if="itemBoardStatus[n].status"
-          :delay-on-touch-only="50"
-          :touch-start-threshold="20"
+          :delay-on-touch-only="100"
+          :touch-start-threshold="50"
           :list="tasks[n]"
           group="id"
           class="ma-2"

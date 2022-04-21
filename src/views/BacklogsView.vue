@@ -21,8 +21,8 @@
         </div>
         <draggable
           v-model="tasks"
-          :delay-on-touch-only="50"
-          :touch-start-threshold="20"
+          :delay-on-touch-only="100"
+          :touch-start-threshold="50"
           group="id"
           style="min-height: 100px"
         >
