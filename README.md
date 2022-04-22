@@ -26,11 +26,14 @@
 <br/>
 
 <img src="images/img2.png" alt="Logo" width="100%">
-<img src="images/img3.png" alt="Logo" width="81%">
-<img src="images/img4.png" alt="Logo" width="17%">
+<div class="d-flex">
+  <img src="images/img3.png" alt="Logo" width="81%">
+  <img src="images/img4.png" alt="Logo" width="17%">
+</div>
 
 <!-- FEATURES -->
-##✨ Features
+<h2 id="features">✨ Features</h2>
+
 * Create/edit tasks, sprints
 * Backlog page
 * Drag and drop tasks into a sprint
@@ -43,7 +46,7 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- BUILT WITH -->
-##🏗️ Built With
+<h2 id="built-with">🏗️ Built With</h2>
 
 * Vue
 * Vuex
@@ -59,7 +62,8 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- PROJECT SETUP -->
-##⚙️Project setup
+<h2 id="project-setup">⚙️ Project setup</h2>
+
 ```
 npm install
 ```
