@@ -5,7 +5,7 @@
 <div align="center">
   <h3 align="center">Task tracking</h3>
   <p align="center">
-    Task tracking with backlog, sprints, drag and drop
+    📝📅 Task tracking with backlog, sprints, drag and drop
     <br />
     <br />
     <a href="https://oleinikovapolina.github.io/task-tracking-for-FTML/dist">View Demo</a>
